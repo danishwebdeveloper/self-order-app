@@ -5,7 +5,6 @@ export const useStyles = makeStyles((theme) => ({
 
     root: {
         height: '100vh',
-        width: '100vh',
         display: 'flex',
         flexDirection: 'column'
     },
@@ -42,5 +41,24 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
+    },
+
+    navy: {
+        background: '#003080'
+    },
+    cards: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    card: {
+        margin: 10
+    },
+    space: {
+        padding: 10
+    },
+    media: {
+        width: 200
     }
+
 }))

@@ -1,5 +1,7 @@
 import { Container, createTheme, CssBaseline, Paper, ThemeProvider } from '@material-ui/core';
-import HomeScreen from './Screens/HomeScreen';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Choosescreen from './screens/Choosescreen';
+import HomeScreen from './screens/HomeScreen';
 
 
 const theme = createTheme({
@@ -24,6 +26,8 @@ const theme = createTheme({
 
 function App() {
     return ( <
+        BrowserRouter >
+        <
         ThemeProvider theme = { theme } >
         <
         CssBaseline / >
@@ -32,10 +36,19 @@ function App() {
         <
         Paper >
         <
-        HomeScreen > < /HomeScreen> <
+        Route path = "/"
+        component = { HomeScreen }
+        exact = { true }
+        /> <
+        Route path = "/choose"
+        component = { Choosescreen }
+        />
+
+        <
         /Paper> <
         /Container> <
-        /ThemeProvider>
+        /ThemeProvider> <
+        /BrowserRouter>  
     );
 }
 export default App;

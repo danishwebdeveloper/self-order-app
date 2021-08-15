@@ -1,15 +1,16 @@
 import React from 'react'
-import { Box, Card, CardActions, Typography } from '@material-ui/core'
+import { Box, Card, CardActionArea, CardActions, Typography } from '@material-ui/core'
 import TouchAppIcon from '@material-ui/icons/TouchApp';
 import { useStyles } from '../styles';
 import { Logo } from '../Components/Logo';
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
     const styles = useStyles();
     return ( <
         Card >
         <
-        CardActions >
+        CardActionArea onClick = {
+            () => props.history.push('/choose') } >
         <
         Box className = {
             [styles.root, styles.red] } >
@@ -49,7 +50,7 @@ export default function HomeScreen() {
         /Typography> <
         /Box> <
         /Box> <
-        /CardActions> <
+        /CardActionArea> <
         /Card>
     )
 }
