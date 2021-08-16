@@ -2,6 +2,7 @@ import { Container, createTheme, CssBaseline, Paper, ThemeProvider } from '@mate
 import { BrowserRouter, Route } from 'react-router-dom';
 import Choosescreen from './screens/Choosescreen';
 import HomeScreen from './screens/HomeScreen';
+import Orderscreen from './screens/Orderscreen';
 
 
 const theme = createTheme({
@@ -42,9 +43,10 @@ function App() {
         /> <
         Route path = "/choose"
         component = { Choosescreen }
-        />
-
-        <
+        /> <
+        Route path = "/order"
+        component = { Orderscreen }
+        /> <
         /Paper> <
         /Container> <
         /ThemeProvider> <

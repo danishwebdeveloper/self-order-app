@@ -33,6 +33,9 @@ export const useStyles = makeStyles((theme) => ({
     largelogo: {
         height: 100,
     },
+    logo: {
+        height: 50,
+    },
 
     check: {
         height: '20px',

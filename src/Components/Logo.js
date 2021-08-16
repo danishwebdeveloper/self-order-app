@@ -2,12 +2,12 @@ import React from 'react'
 import { useStyles } from '../styles'
 
 
-export function Logo() {
+export function Logo(props) {
     const styles = useStyles();
     return ( <
         img src = "/images/logo.png"
         alt = "Logo"
-        className = { styles.largelogo } >
+        className = { props.large ? styles.largelogo : styles.logo } >
         <
         /img>
     )
